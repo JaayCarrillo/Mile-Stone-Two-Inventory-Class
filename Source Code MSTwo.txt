@@ -1,0 +1,83 @@
+Joseph Carrillo 
+CST-150 C# I 
+MileStone Two 
+05/01/22
+
+namespace MileStoneTwo
+{
+    class Program
+    {
+        private static string itemNum;
+
+        static void Main(string [] args)
+        {
+            List<Products> myProducts = new List<Products> ();
+
+            myProducts.Add(new Products
+            {
+                itemName = "Supreme Tee",
+                itemNum = 1,
+                quantityNum = 1,
+                totalInventory = 1,
+                itemDescription = "Boxed Logo Tee"
+            });
+
+            // second product
+            myProducts.Add(new Products
+            {
+                itemName = "Supreme NY Tee",
+                itemNum = 005,
+                quantityNum = 20,
+                totalInventory = 10,
+                itemDescription = "NY Embroidery Tee"
+            });
+
+            // third product 
+            myProducts.Add(new Products
+            {
+                itemName = "Supreme LA Tee",
+               itemNum = 1231,
+                quantityNum = 15,
+                totalInventory = 5,
+                itemDescription = "LA Logo Tee"
+            });
+
+            myProducts.Add(new Products
+            {
+                itemName = "Supreme PHX Tee",
+                itemNum = 1546,
+                quantityNum = 10,
+                totalInventory = 2,
+                itemDescription = "PHX Box Tee"
+            });
+
+            // 
+            foreach (var products in  myProducts)
+            {
+                Console.WriteLine(products.itemName);
+                Console.WriteLine(products.itemNum);
+                Console.WriteLine(products.quantityNum);
+                Console.WriteLine(products.totalInventory);
+                Console.WriteLine(products.itemDescription);
+                Console.WriteLine("------------------------");
+            }
+        }
+
+        class Products
+        {
+            // properties
+            public string itemName { get; set; }
+
+            public string declareItemNum { get ; set; }
+            public int itemNum { get; set; }
+
+
+
+            public int quantityNum { get; set; }
+
+            public int totalInventory { get; set; }
+
+            public string itemDescription  { get; set; }
+        }
+    }
+}
